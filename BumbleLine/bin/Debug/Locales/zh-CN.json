@@ -1,0 +1,19 @@
+{
+  "UI_TIP_BACK":"上一步",
+  "UI_TIP_LAUNCH":"启动",
+  "UI_TIP_DONE":"完成",
+  "UI_SET_TITLE":"设置",
+  "UI_SET_TYPE":"文件类型",
+  "UI_SET_TYPE_DETAIL":"识别 BumbleLine 向导文件",
+  "UI_SET_UAC":"需要以管理员身份运行 BumbleLine。",
+  "UI_SET_LOCALE":"语言",
+  "UI_SET_LOCALE_DETAIL":"偏好语言设置为",
+  "UI_SET_LOCALE_INFO":"BumbleLine 将尝试以此处设置的语言启动，随后尝试使用您的语言。",
+  "UI_SET_ABOUT":"关于",
+  "UI_SET_VER":"版本",
+  "UI_SET_COPYRIGHT":"保留所有权利。",
+  "UI_SET_FREE":"本软件为自由软件，故不提供任何形式之担保。",
+  "UI_SET_LICENSE":"详细软件授权信息可于软件目录下的 LICENSE.txt 中找到。",
+  "UI_SET_WEB":"访问网站",
+  "UI_SET_MAIL":"发送邮件"
+}

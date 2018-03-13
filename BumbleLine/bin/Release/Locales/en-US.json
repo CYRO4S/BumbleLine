@@ -1,0 +1,19 @@
+{
+  "UI_TIP_BACK":"Back",
+  "UI_TIP_LAUNCH":"Launch",
+  "UI_TIP_DONE":"Done",
+  "UI_SET_TITLE":"Settings",
+  "UI_SET_TYPE":"File extension",
+  "UI_SET_TYPE_DETAIL":"Register BumbleLine file extension",
+  "UI_SET_UAC":"Requires Administrator.",
+  "UI_SET_LOCALE":"Language",
+  "UI_SET_LOCALE_DETAIL":"Preferred language",
+  "UI_SET_LOCALE_INFO":"BumbleLine will try starting with this language first, then your language.",
+  "UI_SET_ABOUT":"About",
+  "UI_SET_VER":"Version",
+  "UI_SET_COPYRIGHT":"All rights reserved.",
+  "UI_SET_FREE":"BumbleLine is free software with ABSOLUTELY NO WARRANTY.",
+  "UI_SET_LICENSE":"Detailed software license can be found in LICENSE.txt.",
+  "UI_SET_WEB":"Website",
+  "UI_SET_MAIL":"Email"
+}

@@ -1,0 +1,19 @@
+{
+  "UI_TIP_BACK":"返回",
+  "UI_TIP_LAUNCH":"啟動",
+  "UI_TIP_DONE":"完成",
+  "UI_SET_TITLE":"設定",
+  "UI_SET_TYPE":"檔案類型",
+  "UI_SET_TYPE_DETAIL":"識別 BumbleLine 精靈檔案",
+  "UI_SET_UAC":"需要以管理者身分執行 BumbleLine。",
+  "UI_SET_LOCALE":"語言",
+  "UI_SET_LOCALE_DETAIL":"偏好語言設定為",
+  "UI_SET_LOCALE_INFO":"BumbleLine 將嘗試以此處設定之語言啟動，隨後嘗試使用您的語言。",
+  "UI_SET_ABOUT":"關於",
+  "UI_SET_VER":"版本",
+  "UI_SET_COPYRIGHT":"保留一切權利。",
+  "UI_SET_FREE":"本軟體為自由軟體，故不提供任何形式之擔保。",
+  "UI_SET_LICENSE":"詳情軟體授權資訊可於軟體目錄下的 LICENSE.txt 中找到。",
+  "UI_SET_WEB":"訪問網站",
+  "UI_SET_MAIL":"發送電郵"
+}
