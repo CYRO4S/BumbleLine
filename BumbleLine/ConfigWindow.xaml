@@ -1,0 +1,141 @@
+﻿<Window x:Class="ConfigWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:BumbleLine"
+        mc:Ignorable="d"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="9"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{StaticResource MaterialDesignFont}"
+        Title="BumbleLine™" Height="520" Width="380" Icon="pack://siteoforigin:,,,/Resources/icon.ico"
+        Loaded="Window_Loaded" Closing="Window_Closing" WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <!-- OmniBar -->
+        <DockPanel>
+            <materialDesign:TransitioningContent DockPanel.Dock="Top">
+                <materialDesign:TransitioningContent.OpeningEffects>
+                    <materialDesign:TransitionEffect Kind="FadeIn" Duration="0:0:1"/>
+                    <materialDesign:TransitionEffect Kind="SlideInFromTop" Duration="0:0:0.8" />
+                </materialDesign:TransitioningContent.OpeningEffects>
+                <materialDesign:ColorZone Padding="16" materialDesign:ShadowAssist.ShadowDepth="Depth2" Mode="PrimaryMid" DockPanel.Dock="Top" Height="63" Margin="0,0,0.4,0">
+                    <DockPanel>
+                        <StackPanel Orientation="Horizontal" materialDesign:RippleAssist.IsCentered="True" DockPanel.Dock="Left">
+                            <!-- OmniBar Title -->
+                            <materialDesign:TransitioningContent>
+                                <materialDesign:TransitioningContent.OpeningEffects>
+                                    <materialDesign:TransitionEffect Kind="FadeIn" Duration="0:0:1.1" />
+                                    <materialDesign:TransitionEffect Kind="SlideInFromBottom" Duration="0:0:0.9" />
+                                </materialDesign:TransitioningContent.OpeningEffects>
+                                <TextBlock x:Name="txtTitle" VerticalAlignment="Center" Margin="16 5 0 0" FontSize="20" HorizontalAlignment="Left" Text="設定" Visibility="Visible" />
+                            </materialDesign:TransitioningContent>
+                        </StackPanel>
+                    </DockPanel>
+                </materialDesign:ColorZone>
+            </materialDesign:TransitioningContent>
+
+            <!-- Main Content -->
+            <Grid Height="auto" Width="auto">
+                <materialDesign:TransitioningContent>
+                    <materialDesign:TransitioningContent.OpeningEffects>
+                        <materialDesign:TransitionEffect Kind="FadeIn" Duration="0:0:1"/>
+                        <materialDesign:TransitionEffect Kind="SlideInFromBottom" Duration="0:0:0.8" />
+                    </materialDesign:TransitioningContent.OpeningEffects>
+
+                    <ScrollViewer Width="auto" Height="auto" VerticalScrollBarVisibility="Auto">
+                        <materialDesign:Card Height="auto" Width="auto" Background="{DynamicResource MaterialDesignBackground}" Margin="5 5 5 5">
+                            <StackPanel>
+
+                                <!-- WIFI SETTINGS -->
+                                <Expander HorizontalAlignment="Stretch">
+                                    <Expander.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="FileDocument" />
+                                            <TextBlock x:Name="txtType" Text="檔案類型" FontSize="15" Margin="5 0 0 0" />
+                                        </StackPanel>
+                                    </Expander.Header>
+
+                                    <StackPanel Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}" Margin="24,8,24,16">
+                                        <DockPanel>
+                                            <CheckBox x:Name="chkFileExt" DockPanel.Dock="Right"/>
+                                            <TextBlock x:Name="txtTypeDetail" Text="識別 BumbleLine 精靈檔案" FontSize="15"/>
+                                        </DockPanel>
+                                        <TextBlock x:Name="txtUAC" Text="需要以管理者身分執行 BumbleLine。"  FontSize="12" Margin="0 5 0 0" Visibility="Collapsed" />
+                                    </StackPanel>
+                                </Expander>
+                                <Border Background="{DynamicResource MaterialDesignDivider}" Height="1" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" />
+
+                                <!-- LOCALES -->
+                                <Expander HorizontalAlignment="Stretch">
+                                    <Expander.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="Web" />
+                                            <TextBlock x:Name="txtLocale" Text="語言" FontSize="15" Margin="5 0 0 0" />
+                                        </StackPanel>
+                                    </Expander.Header>
+
+                                    <StackPanel Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}" Margin="24,8,24,16">
+                                        <DockPanel>
+                                            <TextBox x:Name="txtPrefLocale" Text="zh-TW" Width="40" FontSize="12" DockPanel.Dock="Right" TextAlignment="Center" Margin="0 -2 0 0" />
+                                            <TextBlock x:Name="txtLocaleDetail" Text="偏好語言設定為" FontSize="15"/>
+                                        </DockPanel>
+                                        <TextBlock x:Name="txtLocaleInfo" Text="BumbleLine 將嘗試以此處設定之語言啟動，隨後嘗試使用您的語言。" FontSize="12" TextWrapping="Wrap" Margin="0 5 0 0" />
+                                    </StackPanel>
+                                </Expander>
+                                <Border Background="{DynamicResource MaterialDesignDivider}" Height="1" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" />
+
+
+                                <!-- ABOUT -->
+                                <Expander HorizontalAlignment="Stretch">
+                                    <Expander.Header>
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="InformationOutline" />
+                                            <TextBlock x:Name="txtAbout" Text="關於 BumbleLine" FontSize="15" Margin="5 0 0 0" />
+                                        </StackPanel>
+                                    </Expander.Header>
+
+                                    <StackPanel Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}" Margin="24,8,24,16">
+                                        <TextBlock Text="BumbleLine" FontSize="20" />
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock x:Name="txtVer" Text="版本" FontSize="12" Margin="0 2 0 0"/>
+                                            <TextBlock Text="1.0.0" FontSize="12" Margin="2 2 0 0" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="©2017 CYRO4S " FontSize="12" Margin="0 2 0 0"/>
+                                            <TextBlock x:Name="txtCopyright" Text="保留一切權利。" FontSize="12" Margin="2 2 0 0" />
+                                        </StackPanel>
+                                        <TextBlock x:Name="txtFree" Text="本軟體為自由軟體，故不提供任何形式之擔保。" FontSize="12" Margin="0 5 0 0" TextWrapping="Wrap"/>
+                                        <TextBlock x:Name="txtLicense" Text="詳情軟體授權資訊可於軟體目錄下的 LICENSE.txt 中找到。" FontSize="12" TextWrapping="Wrap"/>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock x:Name="txtWebsite" Text="訪問網站" FontSize="12" TextWrapping="Wrap" Margin="0 5 0 0"/>
+                                            <TextBlock Text="  https://ralf.ren" FontSize="12" TextWrapping="Wrap" Margin="0 5 0 0"/>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock x:Name="txtMail" Text="發送電郵" FontSize="12" TextWrapping="Wrap" />
+                                            <TextBlock Text="  me@ralf.ren" FontSize="12" TextWrapping="Wrap" />
+                                        </StackPanel>
+
+                                    </StackPanel>
+                                </Expander>
+                                <Border Background="{DynamicResource MaterialDesignDivider}" Height="1" HorizontalAlignment="Stretch" SnapsToDevicePixels="True" />
+
+
+
+
+                            </StackPanel>
+                        </materialDesign:Card>
+
+                    </ScrollViewer>
+                </materialDesign:TransitioningContent>
+            </Grid>
+
+        </DockPanel>
+
+    </Grid>
+</Window>
